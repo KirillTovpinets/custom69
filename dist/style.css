@@ -1,0 +1,14 @@
+.menu {
+  height: 100vh;
+  background-color: #000; }
+  .menu .title {
+    margin-bottom: 40px;
+    color: #fff; }
+  .menu .menu-items a {
+    display: inline-block;
+    font-size: 30px;
+    padding: 20px 50px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-filter: blur(100px);
+    filter: blur(2px); }

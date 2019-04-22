@@ -1,0 +1,31 @@
+header {
+  height: 100vh;
+  background-color: #000; }
+  header .menu-container {
+    position: relative; }
+    header .menu-container .menu {
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      header .menu-container .menu .title {
+        color: #fff; }
+      header .menu-container .menu .menu-items {
+        top: 50px !important;
+        left: -83% !important; }
+        header .menu-container .menu .menu-items a {
+          pointer-events: all !important;
+          display: inline-block;
+          font-size: 30px;
+          padding: 20px 50px;
+          color: #fff;
+          text-decoration: none;
+          -webkit-filter: blur(2px);
+          filter: blur(2px);
+          transition: all .3s ease;
+          transform: none; }
+          header .menu-container .menu .menu-items a:hover {
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            cursor: pointer;
+            transform: perspective(2000px) translate3d(0, 0, 100px);
+            -webkit-transform: perspective(2000px) translate3d(0, 0, 100px); }
