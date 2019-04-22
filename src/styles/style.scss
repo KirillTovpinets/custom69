@@ -1,6 +1,47 @@
+@font-face{
+    font-family: 'GothamPro Light';
+    src: url('../fonts/Gotham/GothamPro-Light.ttf')
+}
+@font-face{
+    font-family: 'GothamPro Bold';
+    src: url('../fonts/Gotham/GothamProNarrow-Bold.ttf')
+}
+.top-bar,
+.contacts{
+    font-family: 'GothamPro Light', sans-serif;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    padding: 100px 50px;
+}
+.top-bar{
+    top: 0;
+}
+.contacts{
+    bottom: 0;
+    padding: 50px;
+    .social{
+        list-style-type: none;
+        padding: 0;
+        li{
+            padding: 0px 30px;
+            &:first-child{
+                padding-left: 0;
+            }
+            a{
+                color: #fff;
+            }
+        }
+    }
+}
 header{
     height: 100vh;
     background-color: #000;
+    background-image: url('../img/background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     .menu-container{
         position: relative;
         .menu{
@@ -11,12 +52,11 @@ header{
                 color: #fff;
             }
             .menu-items{
-                top: 50px !important;
-                left: -83% !important;
                 a{
                     pointer-events: all !important;
                     display: inline-block;
                     font-size:30px;
+                    font-family: 'GothamPro Bold', serif;
                     padding: 20px 50px;
                     color: #fff;
                     text-decoration: none;
