@@ -6,9 +6,11 @@
     font-family: 'GothamPro Bold';
     src: url('../fonts/Gotham/GothamProNarrow-Bold.ttf')
 }
+*{
+    font-family: 'GothamPro Light', sans-serif;
+}
 .top-bar,
 .contacts{
-    font-family: 'GothamPro Light', sans-serif;
     position: absolute;
     left: 0;
     color: #fff;
@@ -60,19 +62,102 @@ header{
                     padding: 20px 50px;
                     color: #fff;
                     text-decoration: none;
-                    -webkit-filter: blur(2px);
-                    filter: blur(2px);
+                    -webkit-filter: blur(3px);
+                    filter: blur(3px);
                     transition: all .3s ease;
                     transform: none;
                     &:hover{
                         -webkit-filter: blur(0px);
                         filter: blur(0px);
                         cursor: pointer;
-                        transform: perspective(2000px) translate3d(0, 0, 100px);
-                        -webkit-transform: perspective(2000px) translate3d(0, 0, 100px);
+                        transform: perspective(500px) translate3d(0, 0, 100px);
+                        -webkit-transform: perspective(500px) translate3d(0, 0, 100px);
                     }
                 }
             }
         }
+    }
+}
+
+main{
+    .content-section{
+        background-color: #000;
+        .container{
+            padding: 150px 100px;
+            background-color: #f7f7f7;
+            img{
+                width: 100%;
+            }
+        }
+        form{
+            margin-bottom: 150px;
+            padding: 0px 50px;
+            .form-control{
+                background: none;
+                border: none;
+                border-bottom: 3px solid #222;
+                border-radius: 0px;
+                padding: 5px 10px;
+                &::placeholder{
+                    font-family: 'GothamPro Light', sans-serif;
+                    letter-spacing: 1.9px;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .btn{
+                font-family: 'GothamPro Bold', sans-serif;
+                background-color: #000;
+                letter-spacing: 1.9px;
+                border-radius: 0px;
+                border:none;
+                color: #fff;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 10px 30px;
+                box-shadow: 0 15px 20px -10px rgba(0, 0, 0, .4);
+            }
+        }
+        .nav-tabs{
+            border-bottom: none;
+            .nav-link{
+                font-family: 'GothamPro Bold', serif;
+                letter-spacing: 1.9px;
+                border:none;
+                padding: .5rem 1.5rem;
+                color: #8d8d8d;
+                &.active{
+                    color: #000;
+                }
+            }
+        }
+        .tab-pane{
+            padding: 30px 0px;
+            .nav-tabs{
+                margin-bottom: 50px;
+                .nav-link{
+                    padding: .5rem 1rem;
+                }
+            }
+            .table td{
+                border:none;
+                text-transform: uppercase;
+                padding: .5rem .75rem;
+                font-size: 14px;
+            }
+            .image{
+                text-align: center;
+                img{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1500px;
     }
 }
