@@ -74,6 +74,9 @@ main .content-section {
     background-color: #f7f7f7; }
     main .content-section .container img {
       width: 100%; }
+    main .content-section .container .section-title {
+      font-weight: bold;
+      text-align: center; }
   main .content-section form {
     margin-bottom: 150px;
     padding: 0px 50px; }
@@ -109,9 +112,10 @@ main .content-section {
       padding: .5rem 1.5rem;
       color: #8d8d8d; }
       main .content-section .nav-tabs .nav-link.active {
-        color: #000; }
+        color: #000;
+        background-color: transparent; }
   main .content-section .tab-pane {
-    padding: 30px 0px; }
+    padding: 30px 0px 50px; }
     main .content-section .tab-pane .nav-tabs {
       margin-bottom: 50px; }
       main .content-section .tab-pane .nav-tabs .nav-link {

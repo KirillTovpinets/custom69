@@ -83,15 +83,96 @@ main{
     .content-section{
         background-color: #000;
         .container{
-            padding: 150px 100px;
+            padding: 150px 100px 0px;
             background-color: #f7f7f7;
-            img{
-                width: 100%;
+            &:not(:first-child){
+                &.gray-bg{
+                    background-color: #f2f2f2;
+                }
+                padding-top: 0px;
+            }
+            div[class^="section-"]{
+                padding: 50px 0px;
+                &.section-testimonials{
+                    .item{
+                        text-align: center;
+                        .name{
+                            font-family: 'GothamPro Bold';
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                img:not(.image){
+                    width: 100%;
+                }
+                .section-title{
+                    font-family: 'GothamPro Bold';
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+                .content{
+                    .image{
+                        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .4);
+                    }
+                    h4{
+                        font-weight: bold;
+                    }
+                    .advantage{
+                        text-align: center;
+                        .icon{
+                            padding: 30px;
+                        }
+                        .title{
+                            font-family: 'GothamPro Bold';
+                        }
+                        .description{
+                            margin-bottom: 0;
+                        }
+                    }
+                    .stage{
+                        &:not(:last-child){
+                            margin-bottom: 40px;
+                        }
+                        .number{
+                            font-size: 50px;
+                            font-family: 'GothamPro Bold';
+                            transform: rotate(180deg);
+                            writing-mode: vertical-lr;
+                        }
+                        hr{
+                            background-color: #000;
+                            height: 1px;
+                        }
+                    }
+                }
+                .item-stock{
+                    text-align: center;
+                    img{
+                        width: initial;
+                        margin-bottom: 30px;
+                    }
+                    span{
+                        display: block;
+                        font-family: 'GothamPro Bold';
+                        &.old{
+                            font-size: 14px;
+                            text-decoration: line-through;
+                            text-decoration-color: #f00;
+                            text-decoration-style: solid;
+                        }
+                        &.new{
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
         form{
             margin-bottom: 150px;
             padding: 0px 50px;
+            &.callback{
+                margin-bottom: 0;
+            }
             .form-control{
                 background: none;
                 border: none;
@@ -130,11 +211,12 @@ main{
                 color: #8d8d8d;
                 &.active{
                     color: #000;
+                    background-color: transparent;
                 }
             }
         }
         .tab-pane{
-            padding: 30px 0px;
+            padding: 30px 0px 50px;
             .nav-tabs{
                 margin-bottom: 50px;
                 .nav-link{
@@ -154,6 +236,42 @@ main{
                 }
             }
         }
+
+    }
+}
+footer{
+    background-color: #f2f2f2;
+    padding: 50px 0px 20px;
+    .section-title{
+        text-align: center;
+        font-family: 'GothamPro Bold';
+    }
+    .contact-item{
+        margin-bottom: 30px;
+        span{
+            display: block;
+        }
+        &.address{
+            font-size: 14px;
+        }
+    }
+    .social{
+        list-style-type: none;
+        padding: 0;
+        li{
+            float: left;
+            &:not(:last-child){
+                margin-right: 40px;
+            }
+        }
+    }
+    .warning{
+        font-size:14px;
+    }
+
+    small{
+        display: block;
+        text-align: center;
     }
 }
 @media (min-width: 1200px){
