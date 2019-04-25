@@ -177,11 +177,11 @@ main{
 														position: relative;
 														&::before{
 															content: '';
-															display: block;
+															display: inline-block;
 															position: absolute;
 															top: 6px;
 															left: 50%;
-															margin-left: -15%;
+															margin-left: -30px;
 															width: 60px;
 															height: 20px;
 															background-image: url('../img/line-though.png');
