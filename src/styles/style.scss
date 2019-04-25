@@ -1,3 +1,4 @@
+$arrowInterval: -30px;
 @font-face{
     font-family: 'GothamPro Light';
     src: url('../fonts/Gotham/GothamPro-Light.ttf')
@@ -98,12 +99,40 @@ main{
                 padding: 50px 0px;
                 &.section-testimonials{
                     .item{
-                        text-align: center;
+												text-align: center;
+												padding: 0px 30px;
+												&:focus{
+													outline: none;
+												}
                         .name{
                             font-family: 'GothamPro Bold';
                             margin-bottom: 20px;
                         }
-                    }
+										}
+										.slick-slider{
+											.slick-arrow{
+												background: none;
+												border:none;
+												width: 40px;
+												position: absolute;
+												top: 50%;
+												margin-top: -25px;
+												opacity: .3;
+												&:hover{
+													opacity: 1;
+												}
+												&:active,
+												&:focus{
+													outline: none;
+												}
+											}
+											.slick-prev{
+												left: $arrowInterval;
+											}
+											.slick-next{
+												right: $arrowInterval;
+											}
+										}
                 }
                 img:not(.image){
                     width: 100%;

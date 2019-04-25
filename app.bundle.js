@@ -116,7 +116,7 @@ eval("function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! parallax-js */ \"./node_modules/parallax-js/dist/parallax.js\");\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(parallax_js__WEBPACK_IMPORTED_MODULE_0__);\n\nvar scene = document.getElementById('parallaxed-menu');\nvar parallax = new parallax_js__WEBPACK_IMPORTED_MODULE_0___default.a(scene);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! parallax-js */ \"./node_modules/parallax-js/dist/parallax.js\");\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(parallax_js__WEBPACK_IMPORTED_MODULE_0__);\n\n$(document).ready(function () {\n  $('#testimonial-slider').slick({\n    slidesToShow: 3,\n    slidesToSlide: 3,\n    prevArrow: '<button type=\"button\" class=\"slick-prev\"><img src=\"./src/img/icons/angle-left.png\"/></button>',\n    nextArrow: '<button type=\"button\" class=\"slick-next\"><img src=\"./src/img/icons/angle-right.png\"/></button>'\n  });\n  var scene = document.getElementById('parallaxed-menu');\n  var parallax = new parallax_js__WEBPACK_IMPORTED_MODULE_0___default.a(scene);\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
