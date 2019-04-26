@@ -108,6 +108,18 @@ eval("function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbo
 
 /***/ }),
 
+/***/ "./src/js/functions.js":
+/*!*****************************!*\
+  !*** ./src/js/functions.js ***!
+  \*****************************/
+/*! exports provided: clickMenuButtonAct */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"clickMenuButtonAct\", function() { return clickMenuButtonAct; });\n/* harmony import */ var _parallaxObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parallaxObj */ \"./src/js/parallaxObj.js\");\n\n\nvar clickMenuButtonAct = function clickMenuButtonAct(e) {\n  e.preventDefault();\n  var attr = e.target.getAttribute('href');\n  attr = attr.slice(1);\n\n  if (e.target.classList.contains('active')) {\n    e.target.classList.remove('active');\n    $('.menu').removeClass(\"\".concat(attr, \"-active\"));\n    $('.slide-button').removeClass('active');\n    _parallaxObj__WEBPACK_IMPORTED_MODULE_0__[\"default\"].enable();\n    $(\"#\".concat(attr)).removeClass('active');\n  } else {\n    e.target.classList.add('active');\n    $('.menu').addClass(\"\".concat(attr, \"-active\"));\n    $('.slide-button').addClass('active');\n    $(\"#\".concat(attr)).addClass('active');\n    _parallaxObj__WEBPACK_IMPORTED_MODULE_0__[\"default\"].disable();\n  }\n};\n\n\n\n//# sourceURL=webpack:///./src/js/functions.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -116,7 +128,19 @@ eval("function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! parallax-js */ \"./node_modules/parallax-js/dist/parallax.js\");\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(parallax_js__WEBPACK_IMPORTED_MODULE_0__);\n\n$(document).ready(function () {\n  $('#testimonial-slider').slick({\n    slidesToShow: 3,\n    slidesToSlide: 3,\n    prevArrow: '<button type=\"button\" class=\"slick-prev\"><img src=\"./src/img/icons/angle-left.png\"/></button>',\n    nextArrow: '<button type=\"button\" class=\"slick-next\"><img src=\"./src/img/icons/angle-right.png\"/></button>'\n  });\n  var scene = document.getElementById('parallaxed-menu');\n  var parallax = new parallax_js__WEBPACK_IMPORTED_MODULE_0___default.a(scene);\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _parallaxObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parallaxObj */ \"./src/js/parallaxObj.js\");\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ \"./src/js/functions.js\");\n\n\n$(document).ready(function () {\n  $('#testimonial-slider').slick({\n    slidesToShow: 3,\n    slidesToSlide: 3,\n    prevArrow: '<button type=\"button\" class=\"slick-prev\"><img src=\"./src/img/icons/angle-left.png\"/></button>',\n    nextArrow: '<button type=\"button\" class=\"slick-next\"><img src=\"./src/img/icons/angle-right.png\"/></button>'\n  });\n  $('.menu-button').click(_functions__WEBPACK_IMPORTED_MODULE_1__[\"clickMenuButtonAct\"]);\n  $('.button-down').click(function (e) {\n    var target = e.currentTarget.getAttribute('href');\n    var from = $(target).offset().top;\n    $('html, body').animate({\n      scrollTop: from\n    }, 1000);\n    return false;\n  });\n  $('.button-up').click(function (e) {\n    var attr = $('.menu-button.active').attr('href');\n    attr = attr.slice(1);\n    $('.menu-button.active').removeClass('active');\n    e.target.classList.remove('active');\n    $('.menu').removeClass(\"\".concat(attr, \"-active\"));\n    $('.slide-button').removeClass('active');\n    _parallaxObj__WEBPACK_IMPORTED_MODULE_0__[\"default\"].enable();\n    $(\"#\".concat(attr)).removeClass('active');\n  });\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/parallaxObj.js":
+/*!*******************************!*\
+  !*** ./src/js/parallaxObj.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! parallax-js */ \"./node_modules/parallax-js/dist/parallax.js\");\n/* harmony import */ var parallax_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(parallax_js__WEBPACK_IMPORTED_MODULE_0__);\n\nvar scene = document.getElementById('parallaxed-menu');\nvar parallax = new parallax_js__WEBPACK_IMPORTED_MODULE_0___default.a(scene);\n/* harmony default export */ __webpack_exports__[\"default\"] = (parallax);\n\n//# sourceURL=webpack:///./src/js/parallaxObj.js?");
 
 /***/ }),
 

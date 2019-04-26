@@ -31,26 +31,28 @@
         </div>
     </div>
     <header class="d-flex justify-content-center align-items-center flex-column">
+			<a class="slide-button button-up" href="#"><img src="./src/img/icons/angle-up.png" alt="" height="20"></a>
+			<a class="slide-button button-down" href="#main-content"><img src="./src/img/icons/angle-down.png" alt="" height="20"></a>
         <div class="menu-container">
             <nav class="menu" id="parallaxed-menu">
                 <div class="menu-items d-flex" data-depth="3.9">
-                    <div class="item-container">
-                        <a href="#">РЕМОНТ</a>
+                    <div class="item-container remont">
+                        <a id="" class="menu-button" href="#remont">РЕМОНТ</a>
                     </div>
-                    <div class="item-container">
-                        <a href="#">АКСЕССУАРЫ</a>
+                    <div class="item-container accesuary">
+                        <a id="" class="menu-button" href="#accesuary">АКСЕССУАРЫ</a>
                     </div>
-                    <div class="item-container">
-                        <a href="#">ТЕХНИКА</a>
+                    <div class="item-container technica">
+                        <a id="" class="menu-button" href="#technica">ТЕХНИКА</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="content-section">
+    <main id="main-content">
+        <section class="content-section" id="remont">
             <div class="container">
-                <form class="row">
+                <form class="consultation row">
                     <div class="col-md-4">
                         <input type="text" name="" id="" class="form-control" placeholder="ИМЯ" aria-describedby="helpId">
                     </div>
@@ -442,9 +444,83 @@
                 </div>
             </div>
         </section>
-        <section class="content-section">
-            <div class="container"></div>
-        </section>
+        <section class="content-section" id="accesuary">
+            <div class="container">
+							<div class="section-why-us">
+									<h3 class="section-title">ПРЕИМУЩЕСТВА</h3>
+									<div class="content row">
+											<div class="col-md-3 advantage">
+													<div class="icon">
+														<img src="./src/img/icons/map.png" alt="" height="50" class="image">
+													</div>
+													<h5 class="title">БЕСПЛАТНАЯ ДОСТАВКА</h5>
+											</div>
+											<div class="col-md-3 advantage">
+													<div class="icon">
+														<img src="./src/img/icons/dollar.png" alt="" height="50" class="image">
+													</div>
+													<h5 class="title">ОПЛАТА КАРТОЧКОЙ И НАЛИЧНЫМИ</h5>
+											</div>
+											<div class="col-md-3 advantage">
+													<div class="icon">
+														<img src="./src/img/icons/clock.png" alt="" height="50" class="image">
+													</div>
+													<h5 class="title">АКСЕССУАРЫ В РАССРОЧКУ</h5>
+											</div>
+											<div class="col-md-3 advantage">
+													<div class="icon">
+														<img src="./src/img/icons/percent.png" alt="" height="50" class="image">
+													</div>
+													<h5 class="title">ПОСТОЯННЫЕ АКЦИИ</h5>
+											</div>
+									</div>
+							</div>
+							<ul class="nav nav-tabs nav-stacked justify-content-center">
+									<li class="nav-item">
+											<a href="#cases" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" class="nav-link active">ЧЕХЛЫ</a>
+									</li>
+									<li class="nav-item">
+											<a href="#cables" data-toggle="tab" role="tab" aria-controls="ipad" aria-selected="false" class="nav-link">КАБЕЛИ/АДАПТЕРЫ</a>
+									</li>
+									<li class="nav-item">
+											<a href="#headphones" data-toggle="tab" role="tab" aria-controls="imac" aria-selected="false" class="nav-link">НАУШНИКИ</a>
+									</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+									<div class="tab-pane active" id="cases" role="tabpanel" aria-labelledby="cases-tab">
+										<div class="section-goods row justify-content-between">
+												<div class="col-md-3 item-stock">
+														<img src="./src/img/stocks/adapter.png" height="200" alt="">
+														<h6 class="title"><strong>Apple</strong> Lightning cable <small>(ORIGINAL)</small></h6>
+														<span class="old">50<small>BYN</small></span>
+														<span class="new">35<small>BYN</small></span>
+												</div>
+												<div class="col-md-3 item-stock">
+														<img src="./src/img/stocks/APPLE_MD818_01.png" height="200" alt="">
+														<h6 class="title"><strong>Apple</strong> EarPods</h6>
+														<span class="old">50<small>BYN</small></span><span class="new">39<small>BYN</small></span>
+												</div>
+												<div class="col-md-3 item-stock">
+														<img src="./src/img/stocks/APPLE_MD818_01.png" height="200" alt="">
+														<h6 class="title">Защитное стекло + Чехол</h6>
+														<span class="old">55<small>BYN</small></span><span class="new">35<small>BYN</small></span>
+												</div>
+												<div class="col-md-3 item-stock">
+														<img src="./src/img/stocks/adapter2.png" height="200" alt="">
+														<h6 class="title"><strong>Apple</strong> Lightning cable <small>(ORIGINAL)</small></h6>
+														<span class="old">100<small>BYN</small></span><span class="new">50<small>BYN</small></span>
+												</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="cables" role="tabpanel" aria-labelledby="cables-tab">
+											<p>privet</p>
+									</div>
+									<div class="tab-pane fade" id="headphones" role="tabpanel" aria-labelledby="headphones-tab">
+											<p>privet</p>
+									</div>
+							</div>
+						</div>
+				</section>
         <section class="content-section">
             <div class="container"></div>
         </section>
@@ -486,7 +562,10 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
