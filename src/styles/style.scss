@@ -18,7 +18,8 @@ $animationWayLeft: translate3d(-400%, 400%, 0) scale(6) rotate(15deg);
     left: 0;
     color: #fff;
     width: 100%;
-    padding: 50px;
+		padding: 50px;
+		z-index: 10;
 }
 .top-bar{
     top: 0;
