@@ -24,6 +24,18 @@
 strong {
   font-family: 'GothamPro Bold', sans-serif; }
 
+.btn {
+  font-family: 'GothamPro Bold', sans-serif;
+  background-color: #000;
+  letter-spacing: 1.9px;
+  border-radius: 0px;
+  border: none;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: bold;
+  padding: 1rem 1.3rem;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.4); }
+
 .contacts {
   bottom: 0; }
   .contacts .social {
@@ -129,6 +141,8 @@ main .content-section {
   display: none; }
   main .content-section.active {
     display: block; }
+  main .content-section .order-button .btn {
+    padding: 1rem 3.5rem; }
   main .content-section .container {
     margin-top: 0;
     transition: all .3s ease;
@@ -208,6 +222,14 @@ main .content-section {
         main .content-section .container div[class^="section-"] .item-stock img {
           width: initial;
           margin-bottom: 30px; }
+        main .content-section .container div[class^="section-"] .item-stock .title {
+          font-size: 1.2rem; }
+          main .content-section .container div[class^="section-"] .item-stock .title small {
+            font-size: .7rem; }
+        main .content-section .container div[class^="section-"] .item-stock .price {
+          font-size: 1.3rem; }
+          main .content-section .container div[class^="section-"] .item-stock .price small {
+            font-size: .8rem; }
         main .content-section .container div[class^="section-"] .item-stock span {
           display: block;
           font-family: 'GothamPro Bold'; }
@@ -247,17 +269,6 @@ main .content-section {
       main .content-section form .form-control:focus {
         outline: none;
         box-shadow: none; }
-    main .content-section form .btn {
-      font-family: 'GothamPro Bold', sans-serif;
-      background-color: #000;
-      letter-spacing: 1.9px;
-      border-radius: 0px;
-      border: none;
-      color: #fff;
-      font-size: .9rem;
-      font-weight: bold;
-      padding: 1rem 1.3rem;
-      box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.4); }
   main .content-section .nav-tabs {
     border-bottom: none; }
     main .content-section .nav-tabs .nav-link {
@@ -285,6 +296,59 @@ main .content-section {
       text-align: center; }
       main .content-section .tab-pane .image img {
         width: 50%; }
+    main .content-section .tab-pane .settings .title {
+      font-family: 'GothamPro Bold';
+      margin-bottom: 3px;
+      font-size: 2rem; }
+    main .content-section .tab-pane .settings .price {
+      font-weight: bold;
+      font-size: 2.5rem;
+      margin-top: 30px; }
+      main .content-section .tab-pane .settings .price small {
+        font-size: 1.5rem; }
+    main .content-section .tab-pane .settings .colors span {
+      font-size: 1.5rem; }
+    main .content-section .tab-pane .settings .colors .list {
+      margin-top: 10px;
+      width: 215px; }
+      main .content-section .tab-pane .settings .colors .list input {
+        display: none; }
+        main .content-section .tab-pane .settings .colors .list input + label {
+          width: 25px;
+          height: 25px;
+          margin-right: 10px;
+          background-color: #000;
+          border-radius: 50%; }
+          main .content-section .tab-pane .settings .colors .list input + label:hover {
+            cursor: pointer; }
+        main .content-section .tab-pane .settings .colors .list input:checked + label {
+          border: 2px solid #000; }
+      main .content-section .tab-pane .settings .colors .list .color-1 + label {
+        background-color: #790000; }
+      main .content-section .tab-pane .settings .colors .list .color-2 + label {
+        background-color: #bd2e32; }
+      main .content-section .tab-pane .settings .colors .list .color-3 + label {
+        background-color: #28292b; }
+      main .content-section .tab-pane .settings .colors .list .color-4 + label {
+        background-color: #fff; }
+      main .content-section .tab-pane .settings .colors .list .color-5 + label {
+        background-color: #fbc2d5; }
+      main .content-section .tab-pane .settings .colors .list .color-6 + label {
+        background-color: #ffdf8e; }
+      main .content-section .tab-pane .settings .colors .list .color-7 + label {
+        background-color: #e2c8c6; }
+      main .content-section .tab-pane .settings .colors .list .color-8 + label {
+        background-color: #b9d2fa; }
+      main .content-section .tab-pane .settings .colors .list .color-9 + label {
+        background-color: #bef1e6; }
+      main .content-section .tab-pane .settings .colors .list .color-10 + label {
+        background-color: #354f70; }
+      main .content-section .tab-pane .settings .colors .list .color-11 + label {
+        background-color: #ccc5bf; }
+      main .content-section .tab-pane .settings .colors .list .color-12 + label {
+        background-color: #453c3d; }
+    main .content-section .tab-pane .display img {
+      width: 100%; }
 
 footer {
   background-color: #f2f2f2;

@@ -27,6 +27,18 @@ $animationWayLeft: translate3d(-400%, 400%, 0) scale(6) rotate(15deg);
 strong{
 	font-family: 'GothamPro Bold', sans-serif;
 }
+.btn{
+    font-family: 'GothamPro Bold', sans-serif;
+    background-color: #000;
+    letter-spacing: 1.9px;
+    border-radius: 0px;
+    border:none;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: bold;
+    padding: 1rem 1.3rem;
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, .4);
+}
 .contacts{
     bottom: 0;
     .social{
@@ -162,11 +174,16 @@ header{
 
 main{
     .content-section{
-				background-color: #000;
-				display: none;
-				&.active{
-					display: block;
-				}
+        background-color: #000;
+        display: none;
+        &.active{
+            display: block;
+        }
+        .order-button{
+            .btn{
+                padding: 1rem 3.5rem;
+            }
+        }
         .container{
 						margin-top: 0;
 						transition: all .3s ease;
@@ -282,6 +299,18 @@ main{
                         width: initial;
                         margin-bottom: 30px;
                     }
+                    .title{
+                        font-size: 1.2rem;
+                        small{
+                            font-size: .7rem;
+                        }
+                    }
+                    .price{
+                        font-size: 1.3rem;
+                        small{
+                            font-size: .8rem;
+                        }
+                    }
                     span{
                         display: block;
                         font-family: 'GothamPro Bold';
@@ -333,18 +362,6 @@ main{
                     box-shadow: none;
                 }
             }
-            .btn{
-                font-family: 'GothamPro Bold', sans-serif;
-                background-color: #000;
-                letter-spacing: 1.9px;
-                border-radius: 0px;
-                border:none;
-                color: #fff;
-                font-size: .9rem;
-                font-weight: bold;
-                padding: 1rem 1.3rem;
-                box-shadow: 0 15px 20px -10px rgba(0, 0, 0, .4);
-            }
         }
         .nav-tabs{
             border-bottom: none;
@@ -379,6 +396,87 @@ main{
                 text-align: center;
                 img{
                     width: 50%;
+                }
+            }
+            .settings{
+                .title{
+                    font-family: 'GothamPro Bold';
+                    margin-bottom: 3px;
+                    font-size: 2rem;
+                }
+                .price{
+                    font-weight: bold;
+                    font-size: 2.5rem;
+                    margin-top: 30px;
+                    small{
+                        font-size: 1.5rem;
+                    }
+                }
+                .colors{
+                    span{
+                        font-size: 1.5rem;
+                    }
+                    .list{
+                        margin-top: 10px;
+                        width: 215px;
+                        input{
+                            display: none;
+                            &+label{
+                                width: 25px;
+                                height: 25px;
+                                margin-right: 10px;
+                                background-color: #000;
+                                border-radius: 50%;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                            &:checked+label{
+                                border:2px solid #000;
+                            }
+                        }
+                        .color-1+label{
+                            background-color: #790000;
+                        }
+                        .color-2+label{
+                            background-color: #bd2e32;
+                        }
+                        .color-3+label{
+                            background-color: #28292b;
+                        }
+                        .color-4+label{
+                            background-color: #fff;
+                        }
+                        .color-5+label{
+                            background-color: #fbc2d5;
+                        }
+                        .color-6+label{
+                            background-color: #ffdf8e;
+                        }
+                        .color-7+label{
+                            background-color: #e2c8c6;
+                        }
+                        .color-8+label{
+                            background-color: #b9d2fa;
+                        }
+                        .color-9+label{
+                            background-color: #bef1e6;
+                        }
+                        .color-10+label{
+                            background-color: #354f70;
+                        }
+                        .color-11+label{
+                            background-color: #ccc5bf;
+                        }
+                        .color-12+label{
+                            background-color: #453c3d;
+                        }
+                    }
+                }
+            }
+            .display{
+                img{
+                    width: 100%;
                 }
             }
         }
