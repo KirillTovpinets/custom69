@@ -36,8 +36,11 @@ strong{
     color: #fff;
     font-size: .9rem;
     font-weight: bold;
-    padding: 1rem 1.3rem;
+    padding: 1rem 1.5rem;
     box-shadow: 0 15px 20px -10px rgba(0, 0, 0, .4);
+    &:hover{
+        color: red;
+    }
 }
 .contacts{
     bottom: 0;
@@ -199,17 +202,21 @@ main{
                 padding: 50px 0px;
                 &.section-testimonials{
                     .item{
-												text-align: center;
-												padding: 0px 30px;
-												&:focus{
-													outline: none;
-												}
+                        text-align: center;
+                        padding: 0px 30px;
+                        min-width: 300px;
+                        &:focus{
+                            outline: none;
+                        }
                         .name{
                             font-family: 'GothamPro Bold';
                             margin-bottom: 20px;
                         }
 										}
 										.slick-slider{
+                                            .slick-slide{
+                                                display: block;
+                                            }
 											.slick-arrow{
 												background: none;
 												border:none;
@@ -315,24 +322,25 @@ main{
                         display: block;
                         font-family: 'GothamPro Bold';
                         &.old{
-														font-size: 14px;
-														position: relative;
-														&::before{
-															content: '';
-															display: inline-block;
-															position: absolute;
-															top: 6px;
-															left: 50%;
-															margin-left: -30px;
-															width: 60px;
-															height: 20px;
-															background-image: url('../img/line-though.png');
-															background-size: contain;
-															background-repeat: no-repeat;
-														}
+                            font-size: 14px;
+                            position: relative;
+                            &::before{
+                                content: '';
+                                display: inline-block;
+                                position: absolute;
+                                top: 6px;
+                                left: 50%;
+                                margin-left: -30px;
+                                width: 60px;
+                                height: 20px;
+                                background-image: url('../img/line-though.png');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                            }
                         }
                         &.new{
                             font-size: 20px;
+                            margin-top: -10px;
                         }
                     }
                 }
@@ -482,18 +490,22 @@ main{
         }
 		}
 		#accesuary{
+            .stock-title{
+                font-size: 2.5rem;
+            }
 			.stock-container{
 				margin-bottom: 40px;
 			}
-			.item-stock{
+			.item-stock-block{
 				background-color: transparent;
 				padding: 100px 50px;
 				padding-bottom: 0;
-				box-shadow: 0 0 50px 0px rgba(128, 128, 128, .2);
+				box-shadow: 0 0 50px -10px rgba(128, 128, 128, .2);
 				height: 550px;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
+                justify-content: space-between;
+                overflow: hidden;
 				img{
 					width: 100%;
 					margin-top: 40px;
@@ -538,9 +550,10 @@ main{
 				.item-stock{
 					display: flex;
 					align-items: center;
-					flex-direction: row;
+                    flex-direction: row;
+                    box-shadow: 14px 23px 20px -21px rgba(128, 128, 128, 0.2);
 					padding: 0;
-					height: auto;
+					height: 50%;
 					padding-right: 50px;
 					img{
 						width: initial;
@@ -560,6 +573,7 @@ main{
 footer{
     background-color: #f2f2f2;
     padding: 50px 0px 20px;
+    font-size: 1.5rem;
     .section-title{
         text-align: center;
         font-family: 'GothamPro Bold';
@@ -570,21 +584,30 @@ footer{
             display: block;
         }
         &.address{
-            font-size: 14px;
+            font-size: 1.3rem;
         }
     }
     .social{
         list-style-type: none;
         padding: 0;
+        margin-bottom: 30px;
+        display: flex;
         li{
-            float: left;
             &:not(:last-child){
                 margin-right: 40px;
             }
         }
     }
     .warning{
-        font-size:14px;
+        font-size:1.2rem;
+        a{
+            color: inherit;
+            font-weight: bold;
+            &:hover{
+                text-decoration: none;
+                color: red;
+            }
+        }
     }
 
     small{
